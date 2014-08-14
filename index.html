@@ -1,8 +1,21 @@
+
 <html>
 <head>
 	<title>Frames | v1.0</title>
-	<link rel="stylesheet" type="text/css" href="">
-	<link rel="stylesheet" type="text/css" href="">
+  <link rel="icon" href="http://f.wpbennett.com/creature.png  ">
+	<link rel="stylesheet" type="text/css" href="http://f.wpbennett.com/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://f.wpbennett.com/fillsstyle.css">
+  <link rel="stylesheet" type="text/css" href="http://f.wpbennett.com/form-ctrl-fills.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="http://wpbennett.com/bs/js/bootstrap.js"></script>
+  <script type="text/javascript" src="http://wpbennett.com/bs/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+  .center{
+    text-align: center;
+  }  
+  </style>
+
   <script type="text/javascript">
 
       function doStuff()
@@ -27,15 +40,28 @@
 
 <body>
 
-  <input name="maininput" id="clkUrl" type="text" placeholder="Click Tracker" autofocus>
+
+<div class="jumbotron">
+  <h1>Frames</h1>
+  <nav>
+    <ul>
+      <li>| <a href="http://www.f.wpbennett.com">Fills</a> |</li>
+    </ul>
+  </nav>
   <br>
-  <input id="banUrl" type="text" placeholder="Asset URL">
-  <br>
-  <input id="impPix" type="text" placeholder="Impression Pixel">
-  <br>
-  <input type="button" value="Get iFrame" onClick="doStuff()">
-  <br><br>
+  <div align="center">
+  <input class="form-ctrl-fills center" name="maininput" id="clkUrl" type="text" placeholder="Click Tracker" autofocus>
+    <br>
+  <input class="form-ctrl-fills center" id="banUrl" type="text" placeholder="Asset URL">
+    <br>
+  <input class="form-ctrl-fills center" id="impPix" type="text" placeholder="Impression Pixel">
+    <br>
+  <input class="btn btn-default" type="button" value="Get iFrame" onClick="doStuff()">
+    <br><br>
   <textarea id="iframeoutput" rows="8" cols="50"></textarea>
+  </div>
+</div>
+
 </body>  
 </html>
 
