@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Frames | v1.0</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="">
+  <script type="text/javascript">
+
+      function doStuff()
+      {
+        var clkUrl = document.getElementById("clkUrl");
+        var clkName = clkUrl.value;
+        var assetUrl = document.getElementById("banUrl");
+        var assetName = assetUrl.value;
+        var impUrl = document.getElementById("impPix");
+        var impName = impUrl.value;
+
+        var output = document.getElementById("iframeoutput");
+        output.innerHTML = '&lt;a href="' + clkName + '" target="_blank"&gt;';
+        output.innerHTML += '&lt;img src="' + assetName + '"&gt;';
+        output.innerHTML += '&lt;/a&gt;';
+        output.innerHTML += '&lt;img src="' + impName + '"&gt;';
+
+      }
+
+  </script>
+</head>
+
+<body>
+
+  <input name="maininput" id="clkUrl" type="text" placeholder="Click Tracker" autofocus>
+  <br>
+  <input id="banUrl" type="text" placeholder="Asset URL">
+  <br>
+  <input id="impPix" type="text" placeholder="Impression Pixel">
+  <br>
+  <input type="button" value="Get iFrame" onClick="doStuff()">
+  <br><br>
+  <textarea id="iframeoutput" rows="8" cols="50"></textarea>
+</body>  
+</html>
+
+<!--
+-1.0-
+Initial creation
+* "Hello World"
+-->
