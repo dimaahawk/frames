@@ -1,0 +1,86 @@
+
+<html>
+<head>
+	<title>Frames | v1.1</title>
+  <link rel="icon" href="http://f.wpbennett.com/creature.png">
+	<link rel="stylesheet" type="text/css" href="http://f.wpbennett.com/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="http://f.wpbennett.com/fillsstyle.css">
+  <link rel="stylesheet" type="text/css" href="http://f.wpbennett.com/form-ctrl-fills.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="http://wpbennett.com/bs/js/bootstrap.js"></script>
+  <script type="text/javascript" src="http://wpbennett.com/bs/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+  .center{
+    text-align: center;
+  }  
+  </style>
+
+  <script type="text/javascript">
+
+      function doStuff()
+      {
+        var clkUrl = document.getElementById("clkUrl").value.trim();
+        var assetUrl = document.getElementById("banUrl").value.trim();
+        var impUrl = document.getElementById("impPix").value.trim();
+
+        var output = document.getElementById("iframeoutput");
+        output.innerHTML = '&lt;a href="' + clkUrl + '" target="_blank"&gt;';
+        output.innerHTML += '&lt;img src="' + assetUrl + '"&gt;';
+        output.innerHTML += '&lt;/a&gt;';
+        output.innerHTML += '&lt;img src="' + impUrl + '"&gt;';
+      }
+
+  </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-53868309-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+
+
+<div class="jumbotron">
+  <h1>Frames</h1>
+  <nav>
+    <ul>
+      <li>| <a href="http://www.f.wpbennett.com">Fills</a> |</li>
+    </ul>
+  </nav>
+  <br>
+  <div align="center">
+  <input class="form-ctrl-fills center" name="maininput" id="clkUrl" type="text" placeholder="Click Tracker" autofocus>
+    <br>
+  <input class="form-ctrl-fills center" id="banUrl" type="text" placeholder="Banner URL">
+    <br>
+  <input class="form-ctrl-fills center" id="impPix" type="text" placeholder="Impression Pixel">
+    <br>
+  <input class="btn btn-default" type="button" value="Get iFrame" onClick="doStuff()">
+    <br><br>
+  <textarea id="iframeoutput" rows="8" cols="50"></textarea>
+  </div>
+</div>
+
+</body>  
+</html>
+
+<!--
+-1.0-
+Initial creation
+* "Hello World"
+
+-1.1-
+* Google analytics implemented
+* Cleaning some shit up:
+    - Changing banner URL placeholder text
+    - Adding .trim() to input variables
+    - Cleaning up variables
+-->
